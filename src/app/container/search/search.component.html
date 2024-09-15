@@ -1,8 +1,8 @@
 <div class="ekart--search--product">
   <input
     class="ekart-search-product-input"
-    (keyup)="updateSearchText($event)"
-    [value]="searchText"
+    [(ngModel)]="searchText"
+    (input)="onSearchTextChanged()"
   />
   <button
     [ngClass]="{
