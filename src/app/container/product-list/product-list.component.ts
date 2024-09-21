@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../Models/Product';
 
 @Component({
   selector: 'product-list',
@@ -6,6 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './product-list.component.css',
 })
 export class ProductListComponent {
+  selectedProduct!: Product;
+
   products = [
     {
       id: 1,
@@ -34,7 +37,7 @@ export class ProductListComponent {
       gender: 'MEN',
       category: 'RUNNING',
       size: [6, 7, 8, 9, 10],
-      color: ['White', 'Blue', 'Black'],
+      color: ['Grey', 'Blue', 'Black'],
       price: 130,
       is_in_inventory: false,
       items_left: 3,

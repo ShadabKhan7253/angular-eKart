@@ -1,3 +1,4 @@
+import { Product } from './../../../Models/Product';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,20 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
   @Input()
-  product!: {
-    id: number;
-    name: string;
-    description: string;
-    brand: string;
-    gender: string;
-    category: string;
-    size: any;
-    color: any;
-    price: number;
-    discountPrice?: number;
-    is_in_inventory: boolean;
-    items_left: number;
-    imageURL: string;
-    slug: string;
-  };
+  product!: Product;
+
+  // consolelog("helo");
 }
