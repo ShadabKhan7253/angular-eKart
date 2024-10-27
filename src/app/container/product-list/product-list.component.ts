@@ -1,5 +1,5 @@
+import { Product } from './../../Models/Product';
 import { Component, Input } from '@angular/core';
-import { Product } from '../../Models/Product';
 
 @Component({
   selector: 'product-list',
@@ -8,6 +8,11 @@ import { Product } from '../../Models/Product';
 })
 export class ProductListComponent {
   selectedProduct!: Product;
+
+  ngDoCheck() {
+    // console.log('Hello');
+    console.log('Hello', this.selectedProduct);
+  }
 
   products = [
     {
@@ -616,5 +621,10 @@ export class ProductListComponent {
 
   onFilterChanged(value: string) {
     this.selectedRadioButton = value;
+  }
+
+  onSelected() {
+    // this.selectedProduct = product;
+    console.log('Hello');
   }
 }
