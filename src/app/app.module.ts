@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
 import { SetBackground } from './CustomDirective/SetBackground.directive';
+import { HighlightDirective } from './CustomDirective/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SetBackground } from './CustomDirective/SetBackground.directive';
     ProductDetailComponent,
     FeaturedBrandsComponent,
     SetBackground,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
