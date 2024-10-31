@@ -7,8 +7,13 @@ export class SetBackground implements OnInit {
   // private element: ElementRef;
   // private renderer : Renderer2;
 
-  @Input('setBackground') backColor: string = '#36454f';
-  @Input() textColor: string = '#fff';
+  // @Input('setBackground') backColor: string = '#36454f';
+  // @Input() textColor: string = '#fff';
+
+  @Input('setBackground') changeTextAndBackColor: {
+    backColor: string;
+    textColor: string;
+  };
 
   // It will automatically create the private filled element and assign the value too.
   constructor(private element: ElementRef, private renderer: Renderer2) {
@@ -25,8 +30,12 @@ export class SetBackground implements OnInit {
     this.renderer.setStyle(
       this.element.nativeElement,
       'background',
-      this.backColor
+      this.changeTextAndBackColor.backColor
     );
-    this.renderer.setStyle(this.element.nativeElement, 'color', this.textColor);
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'color',
+      this.changeTextAndBackColor.textColor
+    );
   }
 }
